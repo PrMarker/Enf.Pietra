@@ -2,8 +2,8 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="pt-36 pb-24 md:pt-48 md:pb-36 bg-section relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12 min-h-[60vh]">
+    <section className="pt-24 pb-24 md:pt-36 md:pb-36 bg-section relative overflow-hidden">
+      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 min-h-[60vh]">
         <div className="flex-shrink-0 w-full md:w-[350px] lg:w-[400px] xl:w-[450px] order-1 md:order-2">
           <img src="/Dra.Pietra.png" alt="Enf. Pietra Giacomolli" className="rounded-3xl shadow-2xl w-full object-cover" />
         </div>
