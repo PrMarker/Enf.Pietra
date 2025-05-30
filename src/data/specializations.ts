@@ -15,18 +15,24 @@ const specializations: Specialization[] = [
   },
   {
     id: 3,
-    title: "Perfurações + Lobulomodelação",
-    description: "Procedimentos de perfuração e modelagem do lóbulo com técnica humanizada.",
+    title: "Perfuração Humanizada",
+    description: "Perfuração de orelha com técnica humanizada e segura.",
     icon: "Scissors"
   },
   {
     id: 4,
-    title: "Jato de Plasma",
-    description: "Tratamento estético avançado para rejuvenescimento e harmonização.",
-    icon: "Zap"
+    title: "Lobulomodelação",
+    description: "Correção de orelha rasgada com técnica especializada.",
+    icon: "Scissors"
   },
   {
     id: 5,
+    title: "Jato de Plasma",
+    description: "Tratamento para rugas e remoção de sinais e também um bioestimulador de colágeno.",
+    icon: "Zap"
+  },
+  {
+    id: 6,
     title: "Harmonização Corporal e Glúteos",
     description: "Procedimentos para harmonização e modelagem corporal.",
     icon: "Heart"

@@ -3,19 +3,24 @@ import React from 'react';
 const Gallery = () => {
   const images = [
     {
-      before: '/gallery/before1.jpg',
-      after: '/gallery/after1.jpg',
-      description: 'Resultado do tratamento HOF'
+      image: '/HOF.jpg',
+      description: 'Resultado Rinomodelação'
     },
     {
-      before: '/gallery/before2.jpg',
-      after: '/gallery/after2.jpg',
+      image: '/Perfuração.jpg',
       description: 'Resultado da perfuração humanizada'
     },
     {
-      before: '/gallery/before3.jpg',
-      after: '/gallery/after3.jpg',
-      description: 'Resultado do tratamento estético'
+      images: ['/Otomodelaçãoh.jpg', '/Otomodelaçãof.jpg'],
+      description: 'Resultado da Otomodelação'
+    },
+    {
+      image: '/Jato.jpg',
+      description: 'Resultado Jato de Plasma'
+    },
+    {
+      images: ['/PreenchimentoA.jpg', '/PreencimentoDepois.jpg'],
+      description: 'Resultado Preenchimento Labial'
     }
   ];
 
@@ -26,28 +31,28 @@ const Gallery = () => {
           Galeria de Resultados
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {images.map((image, index) => (
+          {images.map((item, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative">
-                <div className="grid grid-cols-2 gap-2 p-2">
-                  <div>
-                    <p className="text-sm text-stone-600 mb-1">Antes</p>
-                    <img
-                      src={image.before}
-                      alt="Antes"
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                {item.images ? (
+                  <div className="grid grid-cols-2 gap-2 p-2">
+                    {item.images.map((img, imgIndex) => (
+                      <img
+                        key={imgIndex}
+                        src={img}
+                        alt={`${item.description} - Imagem ${imgIndex + 1}`}
+                        className="w-full h-48 object-cover rounded-lg"
+                      />
+                    ))}
                   </div>
-                  <div>
-                    <p className="text-sm text-stone-600 mb-1">Depois</p>
-                    <img
-                      src={image.after}
-                      alt="Depois"
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
-                  </div>
-                </div>
-                <p className="p-4 text-center text-stone-700">{image.description}</p>
+                ) : (
+                  <img
+                    src={item.image}
+                    alt={item.description}
+                    className="w-full h-64 object-cover"
+                  />
+                )}
+                <p className="p-4 text-center text-stone-700">{item.description}</p>
               </div>
             </div>
           ))}
